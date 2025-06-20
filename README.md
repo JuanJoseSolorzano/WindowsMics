@@ -16,16 +16,9 @@ Easily switch between the **Windows 11 modern context menu** and the **classic W
 ## ⚙️ Usage
 
 1. 📥 Download the `.cmd` file you want to use.
-2. 🖱️ Right-click on it and choose **Run as administrator**.
+2. 🖱️ Right-click on it and choose.
 3. 🔄 The Explorer process will restart automatically.
 4. ✅ Done! Your context menu style is now changed.
-
----
-
-## 🛡️ Requirements
-
-- 🪟 Windows 11
-- 🛠️ Administrator privileges
 
 ---
 
@@ -47,6 +40,8 @@ Run `standardRightClick.cmd` to remove the registry change and go back to the de
 ## 💡 Tip
 
 You can pin either script to your taskbar or desktop for quick toggling.
+
+- Run Win+R and type either `standardRighClick` or `w11RightClick.cmd` 
 
 ---
 
