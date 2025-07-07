@@ -44,6 +44,61 @@ You can pin either script to your taskbar or desktop for quick toggling.
 - Run Win+R and type either `standardRighClick` or `w11RightClick.cmd` 
 
 ---
+## 📌 Markdown Render
+
+ Use the Markdown render add to `C:\Users\<user>\AppData\Local\nvim\lua\plugins\render-markdown.lua` and add the following code:
+
+```lua
+-- This module should be placed in the ``%USERPROFILE%\AppData\Local\nvim\lua\custom\plugins\render-markdown.lua`` directory.
+-- after placing thid file, run `:Lazynvim sync`
+-- Run :RenderMarkdown
+-- Stop :RenderMarkdownToggle
+-- Clear :RenderMarkdownClear
+
+return {
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    name = "render-markdown",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    ft = "markdown",
+    config = function()
+      require("render-markdown").setup({})
+    end,
+  },
+}
+```
+
+ - For use the markdown render, you need to following steps:
+Opt1: fix the bold text by adding `vim.api.nvim_set_hl(0, "@markup.strong.markdown_inline", { bold = true, fg = "#ffaa00" })` to the `init.lua` file.
+
+### Shortcut to toggle the render markdown plugin:
+
+```lua
+vim.keymap.set("n", "<C-m>", ":RenderMarkdown toggle<CR>", { desc = "Toggle Markdown Render" })
+```
+
+>[!NOTE] 
+>Use the `JetBrainsMono Nerd Font` as a main font in your Windows Terminal.
+
+---
+
+## GitHub Copilot and ChadNVim
+
+```bash
+git clone --depth=1 https://github.com/github/copilot.vim.git $HOME/vimfiles/pack/github/start/copilot.vim
+```
+Create a file `C:\Users\<user>\AppData\Local\nvim\lua\plugins\copilot.lua` with the following content:
+
+```lua
+return {
+  {
+    "github/copilot.vim",
+    lazy = false, -- load during startup
+  },
+}
+
+```
+---
 
 ## 📜 License
 
